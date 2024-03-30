@@ -1,5 +1,5 @@
 import 'package:e_commerce/feature/view/home/home_screen.dart';
-import 'package:e_commerce/product/utility/app_theme.dart';
+import 'package:e_commerce/product/utility/theme/app_theme.dart';
 import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
       return MaterialApp(
-        title: 'Flutter Demo',
-        theme: AppTheme().currentTheme,
+        theme: theme,
+        title: 'e_commerce',
         home: const HomeScreen(),
       );
     });

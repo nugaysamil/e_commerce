@@ -14,7 +14,14 @@ class HomeScreen extends StatelessWidget {
         appBarLeftIcon: Icons.menu,
         appBarText: StringConstants.homeText,
       ),
-      body: CustomDecorationBox(),
+      body: Column(
+        children: [
+          CustomDecorationBox(),
+          Text(
+            'Category',
+          ),
+        ],
+      ),
     );
   }
 }

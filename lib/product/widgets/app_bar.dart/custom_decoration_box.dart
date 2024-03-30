@@ -1,4 +1,9 @@
 import 'package:e_commerce/product/generation/colors.gen.dart';
+import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
+import 'package:e_commerce/product/utility/theme/app_decoration.dart';
+import 'package:e_commerce/product/utility/theme/app_theme.dart';
+import 'package:e_commerce/product/utility/theme/custom_button_style.dart';
+import 'package:e_commerce/product/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
 class CustomDecorationBox extends StatelessWidget {
