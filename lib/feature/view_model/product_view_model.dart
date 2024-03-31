@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:e_commerce/feature/model/product_model.dart';
 import 'package:e_commerce/product/service/manager/product_network_manager.dart';
@@ -16,7 +15,6 @@ class ProductViewModel {
         List<Product> productList = [];
         for (var productJson in response.data) {
           productList.add(Product.fromJson(productJson));
-          print(productList);
         }
         return productList;
       } else {

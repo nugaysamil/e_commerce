@@ -1,3 +1,4 @@
+import 'package:e_commerce/product/generation/assets.gen.dart';
 import 'package:e_commerce/product/generation/colors.gen.dart';
 import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
 import 'package:e_commerce/product/utility/theme/app_decoration.dart';
@@ -28,6 +29,10 @@ class CustomDecorationBox extends StatelessWidget {
               borderRadius: BorderRadius.circular(
                 8.h,
               ),
+            ),
+            child: Image.asset(
+              Assets.images.images.path,
+              fit: BoxFit.fill,
             ),
           ),
           Padding(

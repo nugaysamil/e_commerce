@@ -5,4 +5,7 @@ class StringConstants {
   static final String category = 'Category';
   static final String seeAll = 'See all';
   static final String popularProducts = 'Popular Products';
+  static final String latestProducts = 'Latest Products';
+
+
 }
