@@ -1,4 +1,5 @@
 import 'package:e_commerce/feature/model/list/category_list.dart';
+import 'package:e_commerce/feature/view_model/product_view_model.dart';
 import 'package:e_commerce/feature/widgets/category/category_header.dart';
 import 'package:e_commerce/feature/widgets/category/category_list_view.dart';
 import 'package:e_commerce/feature/widgets/product/product_card.dart';
@@ -10,12 +11,18 @@ import 'package:e_commerce/product/widgets/app_bar.dart/custom_appbar.dart';
 import 'package:e_commerce/product/widgets/custom_decoration_box.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
   Widget build(BuildContext context) {
     final CategoryList categoryList = CategoryList();
+     
 
     return Scaffold(
       appBar: CustomAppBar(
