@@ -1,3 +1,4 @@
+import 'package:e_commerce/feature/view/product_detail/product_detail.dart';
 import 'package:e_commerce/feature/view_model/product_view_model.dart';
 import 'package:e_commerce/feature/widgets/product/product_card.dart';
 import 'package:e_commerce/product/utility/const/string_constant.dart';
@@ -39,6 +40,18 @@ class PopularScreen extends ConsumerWidget {
                   reviewCount: '${product.rating?.count ?? 0}',
                   price: '${product.price ?? 0}',
                   imageUrl: product.image!,
+                  onButtonPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ProductDetailScreen(
+                        title: product.title ?? 'No title',
+                        reviewCount: '${product.rating?.count ?? 0}',
+                        price: '${product.price ?? 0}',
+                        imageUrl: product.image!,
+                        description: product.description!,
+                        category: product.category!
+                      ),
+                    ),
+                  ),
                 );
               },
             ),

@@ -1,6 +1,7 @@
 import 'package:e_commerce/feature/view/category/category_screen.dart';
 import 'package:e_commerce/feature/view/home/home_screen.dart';
 import 'package:e_commerce/feature/view/product/product_screen.dart';
+import 'package:e_commerce/feature/view/product_detail/product_detail.dart';
 import 'package:e_commerce/product/utility/theme/app_theme.dart';
 import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
 import 'package:flutter/material.dart';

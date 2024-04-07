@@ -14,6 +14,8 @@ class ProductCard extends StatelessWidget {
   final String reviewCount;
   final String price;
   final String imageUrl;
+  final VoidCallback? onButtonPressed; 
+
 
   const ProductCard({
     Key? key,
@@ -21,68 +23,72 @@ class ProductCard extends StatelessWidget {
     required this.reviewCount,
     required this.price,
     required this.imageUrl,
+      this.onButtonPressed
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(14.h),
-      decoration: AppDecoration.outlineBlackA.copyWith(
-        borderRadius: BorderRadiusStyle.roundedBorder8,
-      ),
-      width: 200.h,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomImageView(
-            imagePath: ImageConstant.imgFavorite,
-            height: 14.v,
-            alignment: Alignment.centerRight,
-          ),
-          SizedBox(height: 12.v),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                color: appTheme.gray20001,
-                borderRadius: BorderRadius.circular(
-                  10.h,
+    return GestureDetector(
+      onTap: onButtonPressed,
+      child: Container(
+        padding: EdgeInsets.all(14.h),
+        decoration: AppDecoration.outlineBlackA.copyWith(
+          borderRadius: BorderRadiusStyle.roundedBorder8,
+        ),
+        width: 200.h,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomImageView(
+              imagePath: ImageConstant.imgFavorite,
+              height: 14.v,
+              alignment: Alignment.centerRight,
+            ),
+            SizedBox(height: 12.v),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: appTheme.gray20001,
+                  borderRadius: BorderRadius.circular(
+                    10.h,
+                  ),
                 ),
-              ),
-              child: CustomNetworkImage(
-                imageUrl: imageUrl,
+                child: CustomNetworkImage(
+                  imageUrl: imageUrl,
+                ),
               ),
             ),
-          ),
-          SizedBox(height: 12.v),
-          Text(
-            title,
-            style: theme.textTheme.titleSmall,
-            maxLines: 2,
-          ),
-          SizedBox(height: 6.v),
-          Row(
-            children: [
-              CustomImageView(
-                imagePath: ImageConstant.imgFavorite,
-                height: 14.v,
-                alignment: Alignment.centerRight,
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 8.h),
-                child: Text(
-                  "($reviewCount reviews)",
-                  style: theme.textTheme.bodySmall,
+            SizedBox(height: 12.v),
+            Text(
+              title,
+              style: theme.textTheme.titleSmall,
+              maxLines: 2,
+            ),
+            SizedBox(height: 6.v),
+            Row(
+              children: [
+                CustomImageView(
+                  imagePath: ImageConstant.imgFavorite,
+                  height: 14.v,
+                  alignment: Alignment.centerRight,
                 ),
-              ),
-            ],
-          ),
-          SizedBox(height: 7.v),
-          Text(
-            price,
-            style: theme.textTheme.titleMedium,
-          ),
-        ],
+                Padding(
+                  padding: EdgeInsets.only(left: 8.h),
+                  child: Text(
+                    "($reviewCount reviews)",
+                    style: theme.textTheme.bodySmall,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 7.v),
+            Text(
+              price,
+              style: theme.textTheme.titleMedium,
+            ),
+          ],
+        ),
       ),
     );
   }
