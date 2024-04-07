@@ -8,4 +8,5 @@ class StringConstants {
   static final String latestProducts = 'Latest Products';
 
 
+
 }

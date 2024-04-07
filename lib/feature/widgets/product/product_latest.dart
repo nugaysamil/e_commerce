@@ -30,7 +30,7 @@ class LatestProduct extends StatelessWidget {
         borderRadius: BorderRadiusStyle.roundedBorder8,
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
@@ -44,7 +44,7 @@ class LatestProduct extends StatelessWidget {
             ),
             child: CustomNetworkImage(
               imageUrl: imageUrl,
-              boxFit: BoxFit.contain,
+              boxFit: BoxFit.fill,
             ),
           ),
           Flexible(
@@ -64,28 +64,37 @@ class LatestProduct extends StatelessWidget {
                     maxLines: 1,
                   ),
                   SizedBox(
-                    height: 6.v,
+                    height: 5.v
                   ),
                   Text(
                     cost,
                     style: theme.textTheme.titleMedium,
                   ),
-                  Spacer(),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 32.v),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      SizedBox(
+                        width: 6.v,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 30.v),
                     child: Text(
-                      reviewCount,
+                          "($reviewCount reviews)",
                       style: theme.textTheme.bodySmall,
                     ),
+                      ),
+                      CustomImageView(
+                        imagePath: ImageConstant.imgSignal,
+                        height: 14.v,
+                        margin: EdgeInsets.only(
+                          left: 8.h,
+                          bottom: 32.v,
+                        ),
+                      ),
+                    ],
                   ),
-                  CustomImageView(
-                    imagePath: ImageConstant.imgSignal,
-                    height: 14.v,
-                    margin: EdgeInsets.only(
-                      left: 8.h,
-                      bottom: 32.v,
-                    ),
-                  ),
+                 
+                  
                 ],
               ),
             ),

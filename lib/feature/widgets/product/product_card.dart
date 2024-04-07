@@ -2,6 +2,7 @@
 import 'package:e_commerce/product/utility/const/image_constant.dart';
 import 'package:e_commerce/product/widgets/custom_image_view.dart';
 import 'package:e_commerce/product/widgets/custom_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
@@ -13,7 +14,6 @@ class ProductCard extends StatelessWidget {
   final String reviewCount;
   final String price;
   final String imageUrl;
-
 
   const ProductCard({
     Key? key,
@@ -39,19 +39,19 @@ class ProductCard extends StatelessWidget {
             imagePath: ImageConstant.imgFavorite,
             height: 14.v,
             alignment: Alignment.centerRight,
-          ), 
+          ),
           SizedBox(height: 12.v),
-          Container(
-            height: 131.v,
-            width: 157.h,
-            decoration: BoxDecoration(
-              color: appTheme.gray20001,
-              borderRadius: BorderRadius.circular(
-                10.h,
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: appTheme.gray20001,
+                borderRadius: BorderRadius.circular(
+                  10.h,
+                ),
               ),
-            ),
-            child: CustomNetworkImage(
-              imageUrl: imageUrl,
+              child: CustomNetworkImage(
+                imageUrl: imageUrl,
+              ),
             ),
           ),
           SizedBox(height: 12.v),
@@ -61,14 +61,13 @@ class ProductCard extends StatelessWidget {
             maxLines: 2,
           ),
           SizedBox(height: 6.v),
-          
           Row(
             children: [
               CustomImageView(
-            imagePath: ImageConstant.imgFavorite,
-            height: 14.v,
-            alignment: Alignment.centerRight,
-              ), 
+                imagePath: ImageConstant.imgFavorite,
+                height: 14.v,
+                alignment: Alignment.centerRight,
+              ),
               Padding(
                 padding: EdgeInsets.only(left: 8.h),
                 child: Text(
