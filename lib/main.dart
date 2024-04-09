@@ -1,3 +1,4 @@
+import 'package:e_commerce/feature/view/cart/cart_screen.dart';
 import 'package:e_commerce/feature/view/category/category_screen.dart';
 import 'package:e_commerce/feature/view/home/home_screen.dart';
 import 'package:e_commerce/feature/view/product/product_screen.dart';
@@ -19,7 +20,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {

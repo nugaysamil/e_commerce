@@ -1,3 +1,6 @@
+import 'package:e_commerce/feature/model/product_model.dart';
+import 'package:e_commerce/feature/view/cart/cart_screen.dart';
+import 'package:e_commerce/feature/view/cart/notifier/cart_notifier.dart';
 import 'package:e_commerce/product/utility/const/image_constant.dart';
 import 'package:e_commerce/product/utility/const/string_constant.dart';
 import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
@@ -10,10 +13,11 @@ import 'package:e_commerce/product/widgets/custom_rating_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../product/utility/theme/app_decoration.dart';
 
-class ProductDetailScreen extends StatelessWidget {
+class ProductDetailScreen extends ConsumerWidget {
   final String title;
   final String reviewCount;
   final String price;
@@ -32,7 +36,7 @@ class ProductDetailScreen extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: CustomAppBar(
         appBarText: StringConstants.productDetail,
@@ -176,7 +180,27 @@ class ProductDetailScreen extends StatelessWidget {
               CustomElevatedButton(
                 height: 48.v,
                 text: "Add To Cart".toUpperCase(),
+                onPressed: () {
+                  Product product = Product(
+                    title: title,
+                    price: double.parse(price),
+                    image: imageUrl,
+                  );
+
+                  ref.read(cartProvider.notifier).addProduct(product);
+
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => CartScreen(),
+                    ),
+                  );
+                },
               ),
+
+              
+
+             
+
               SizedBox(height: 6.v),
             ],
           ),

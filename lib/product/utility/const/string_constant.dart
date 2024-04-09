@@ -7,6 +7,8 @@ class StringConstants {
   static final String popularProducts = 'Popular Products';
   static final String latestProducts = 'Latest Products';
   static final String productDetail = 'Product Detail';
+  static final String cart = 'Cart';
+
 
 
 

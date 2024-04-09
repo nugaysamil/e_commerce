@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
 import 'package:e_commerce/product/utility/theme/app_theme.dart';
 import 'package:flutter/material.dart';
