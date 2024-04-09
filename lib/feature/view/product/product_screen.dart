@@ -3,7 +3,7 @@ import 'package:e_commerce/feature/view_model/product_view_model.dart';
 import 'package:e_commerce/feature/widgets/product/product_card.dart';
 import 'package:e_commerce/product/utility/const/string_constant.dart';
 import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
-import 'package:e_commerce/product/widgets/appbar/custom_appbar.dart';
+import 'package:e_commerce/product/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

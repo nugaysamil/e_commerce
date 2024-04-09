@@ -3,7 +3,7 @@ import 'package:e_commerce/feature/view/category/widget/category_icon_title.dart
 import 'package:flutter/material.dart';
 import 'package:e_commerce/product/utility/const/string_constant.dart';
 import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
-import 'package:e_commerce/product/widgets/appbar/custom_appbar.dart';
+import 'package:e_commerce/product/widgets/custom_appbar.dart';
 import 'package:e_commerce/product/widgets/custom_decoration_box.dart';
 
 class CategoryScreen extends StatefulWidget {

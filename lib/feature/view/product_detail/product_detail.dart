@@ -6,7 +6,7 @@ import 'package:e_commerce/product/utility/const/string_constant.dart';
 import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
 import 'package:e_commerce/product/utility/theme/app_theme.dart';
 import 'package:e_commerce/product/utility/theme/custom_text_style.dart';
-import 'package:e_commerce/product/widgets/appbar/custom_appbar.dart';
+import 'package:e_commerce/product/widgets/custom_appbar.dart';
 import 'package:e_commerce/product/widgets/custom_elevated_button.dart';
 import 'package:e_commerce/product/widgets/custom_image_view.dart';
 import 'package:e_commerce/product/widgets/custom_rating_bar.dart';

@@ -1,19 +1,12 @@
-import 'package:e_commerce/feature/view/cart/cart_screen.dart';
-import 'package:e_commerce/feature/view/category/category_screen.dart';
 import 'package:e_commerce/feature/view/home/home_screen.dart';
-import 'package:e_commerce/feature/view/product/product_screen.dart';
-import 'package:e_commerce/feature/view/product_detail/product_detail.dart';
+import 'package:e_commerce/product/init/application_init.dart';
 import 'package:e_commerce/product/utility/theme/app_theme.dart';
 import 'package:e_commerce/product/utility/responsive/responsive_build.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
+  ApplicationInit.init();
   runApp(ProviderScope(child: const MyApp()));
 }
 
