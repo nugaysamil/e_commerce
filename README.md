@@ -9,9 +9,8 @@ e-commerce is a Flutter project designed to showcase an online shopping experien
 - **Shopping Cart:** Users can add products to their shopping cart and view the total cost of their selected items.
 - **Responsive Design:** The app is designed to work on both mobile and tablet devices.
 
-https://github.com/nugaysamil/e_commerce/assets/106466382/cae8318a-b388-4e31-b89a-67f03e078711
 
-Uploading Screen Recording 2024-04-01 at 17.40.20.mov…
+https://github.com/nugaysamil/e_commerce/assets/106466382/e50d8b4a-3d44-4b23-82a6-46884cd7a7d4
 
 
 ## Dependencies
